@@ -1,3 +1,6 @@
+import 'package:dream_sketch/pages/dream_sketch_home/dream_sketch_home_point.dart';
+import 'package:dream_sketch/pages/dream_sketch_mind/dream_sketch_mind_binding.dart';
+import 'package:dream_sketch/pages/dream_sketch_mind/dream_sketch_mind_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -55,7 +58,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: Dream,
-          initialRoute: '/tab',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: primaryColor,
@@ -109,6 +112,14 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Dream = [
   GetPage(
+    name: '/',
+    page: () => const DreamSketchMindView(),
+    binding: DreamSketchMindBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
     name: '/tab',
     page: () => const DreamSketchTabView(),
     binding: DreamSketchTabBinding(),
@@ -120,6 +131,13 @@ List<GetPage<dynamic>> Dream = [
     name: '/canvas',
     page: () => const DreamSketchCanvasView(),
     binding: DreamSketchCanvasBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
+    name: '/home-point',
+    page: () => const DreamSketchHomePoint(),
     transition: Transition.cupertino,
     popGesture: true,
     preventDuplicates: false,

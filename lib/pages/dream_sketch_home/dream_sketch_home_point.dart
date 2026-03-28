@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import '../dream_sketch_mind/dream_sketch_mind_logic.dart';
 
 class DreamSketchHomePoint extends GetView<DreamSketchMindLogic> {
+  const DreamSketchHomePoint({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class DreamSketchHomePoint extends GetView<DreamSketchMindLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.cxhbijs.value)),
+              url: WebUri.uri(Uri.parse(controller.rmidzhf.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

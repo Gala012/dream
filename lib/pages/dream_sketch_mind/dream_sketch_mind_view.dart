@@ -11,8 +11,8 @@ class DreamSketchMindView extends GetView<DreamSketchMindLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.hrpotg.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.acrbwvux.value
+              ? const CircularProgressIndicator(color: Colors.deepPurple)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class DreamSketchMindView extends GetView<DreamSketchMindLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.yrodhq();
+              controller.aqle();
             },
             icon: const Icon(
               Icons.restart_alt,
